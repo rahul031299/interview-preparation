@@ -47,37 +47,40 @@ if st.button("Generate Research Briefing", type="primary"):
 
                 # 2. THE MASTER PROMPT
                 full_prompt = f"""
-                Role: You are an elite career coach and corporate intelligence researcher.
+                Act as an elite corporate intelligence researcher. Create a highly precise, actionable, and scannable "Interview Cheat Sheet" for a candidate interviewing at {company_name} for the {job_role} position.
                 
-                Task: I am preparing a student for a job interview at {company_name} for the {job_role} position. 
-                Please generate a highly detailed, comprehensive research briefing to give them a competitive edge.
+                STRICT CONSTRAINTS:
+                - ZERO fluff, filler words, or generic advice.
+                - Use punchy, data-backed bullet points.
+                - Maximum 2-3 bullets per section.
+                - Keep sentences under 15 words.
                 
-                Please structure the briefing strictly using the following sections. Use markdown for readability:
+                STRUCTURE THE OUTPUT EXACTLY LIKE THIS:
                 
-                1. Company Overview & DNA:
-                - Founding history, mission statement, and core company values.
-                - Key executives and current leadership structure.
+                ### 🏢 1. The DNA (Company Overview)
+                * **What they actually do:** [1 sentence summary]
+                * **Core Values:** [Just the keywords, e.g., "Bias for Action, Frugality"]
                 
-                2. Business Model & Financial Health:
-                - How does the company make money? (Core products, services, target audience, and revenue streams).
-                - Recent financial performance, funding rounds, or overall market position.
+                ### 💰 2. The Engine (Business Model & Health)
+                * **How they make money:** [Revenue streams in 1 bullet]
+                * **Market Position:** [Current financial health or market share]
                 
-                3. Industry Landscape & Competitors:
-                - Who are their top 3 to 5 direct competitors?
-                - What is {company_name}'s unique value proposition or competitive advantage in the market?
+                ### ⚔️ 3. The Moat (Competitors & Advantage)
+                * **Top 3 Competitors:** [Names only]
+                * **The Unique Advantage:** [Why they win against competitors in 1 sentence]
                 
-                4. Recent News & Strategic Initiatives:
-                - Major announcements, product launches, acquisitions, or news events from the last 6 to 12 months.
-                - Current challenges, industry shifts, or pain points the company might be trying to solve.
+                ### 📰 4. The "Right Now" (Recent News & Challenges)
+                * **Recent Win:** [Biggest news/launch in the last 6 months]
+                * **Biggest Pain Point:** [Current strategic challenge they are facing]
                 
-                5. Work Culture & Employee Experience:
-                - Known workplace culture, management style, and work environment (synthesize general insights typically found on company review sites).
-                - Notable initiatives regarding employee growth or social responsibility.
+                ### 🎯 5. The Interview Angle (For a {job_role})
+                * **What they want:** [The core competency needed for this specific role]
+                * **Cultural Fit:** [Top 2 soft skills to emphasize]
                 
-                6. Interview Strategy & Application for {job_role}:
-                - How the student can connect their role to the company's broader mission.
-                - Specific soft skills or behavioral traits the company historically values (e.g., bias for action, collaboration, adaptability).
-                - 3 highly tailored, strategic questions the student should ask the interviewer at the end of the conversation to demonstrate deep research.
+                ### 🎤 6. The "Drop the Mic" Questions (To ask the interviewer)
+                Provide exactly 2 highly strategic, role-specific questions the candidate should ask to prove they did deep research. (Do not give generic questions).
+                1. [Question 1]
+                2. [Question 2]
                 """
 
                 # 3. GENERATE

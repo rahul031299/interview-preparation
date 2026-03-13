@@ -79,17 +79,24 @@ if st.button("Generate Research Briefing", type="primary"):
                 Act as an elite corporate intelligence researcher and MBA Career Coach. Your task is to generate a comprehensive but highly scannable "5-Minute Interview Dossier" for a candidate interviewing at {company_name} for the {job_role} position.
                 {live_context}
                 
+                CRITICAL ACCURACY & ENTITY CHECK:
+                Before generating the dossier, you MUST verify the exact identity of '{company_name}'. 
+                - If multiple companies share this name, use the '{job_role}' context and the provided website data to identify the correct corporate entity.
+                - Ground ALL facts (revenue, competitors, news) strictly in reality. Do NOT hallucinate or guess financial metrics.
+                - If a specific metric or news item is unknown, state "Data not publicly disclosed" rather than making it up.
+                
                 STRICT FORMATTING RULES:
                 - Target length: Detailed enough for a 5-minute read (approx. 600-800 words).
                 - Use bullet points with bolded keywords for easy scanning.
                 - NO long, blocky paragraphs. 
-                - Focus on MBA-level strategic insights (metrics, strategy, frameworks) rather than generic surface-level facts.
+                - Focus on MBA-level strategic insights rather than generic surface-level facts.
                 
                 STRUCTURE THE DOSSIER EXACTLY AS FOLLOWS:
                 
                 ### 🏢 1. The Executive Brief (Company DNA)
+                * **Verified Entity:** [State the full legal name, industry, and HQ location of the company you are profiling to prove you selected the right one]
                 * **Mission & Vision:** [2-3 sentences explaining their core purpose and long-term goal]
-                * **Culture & Values:** [3 detailed bullet points on their management style and what behaviors they actually reward in employees]
+                * **Culture & Values:** [3 detailed bullet points on their management style and what behaviors they actually reward]
                 
                 ### 💰 2. The Economic Engine (Business Model)
                 * **Revenue Streams:** [Break down exactly how they make money in 3-4 detailed bullets. Mention core products/services and target demographics.]
@@ -100,7 +107,7 @@ if st.button("Generate Research Briefing", type="primary"):
                 * **Unique Value Proposition:** [Detail their 'unfair advantage'—e.g., distribution network, proprietary tech, brand loyalty]
                 
                 ### 📰 4. Strategic Imperatives (Recent News & Headwinds)
-                * **Recent Wins:** [2-3 bullet points on major launches, acquisitions, or positive news from the last 12 months]
+                * **Recent Wins:** [2-3 bullet points on major launches, acquisitions, or positive news from the last 12-18 months]
                 * **Current Challenges/Headwinds:** [2-3 bullet points on their biggest threats right now—e.g., regulatory hurdles, supply chain, new entrants, AI disruption]
                 
                 ### 🎯 5. The {job_role} Playbook

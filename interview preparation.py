@@ -47,40 +47,44 @@ if st.button("Generate Research Briefing", type="primary"):
 
                 # 2. THE MASTER PROMPT
                 full_prompt = f"""
-                Act as an elite corporate intelligence researcher. Create a highly precise, actionable, and scannable "Interview Cheat Sheet" for a candidate interviewing at {company_name} for the {job_role} position.
+                Act as an elite corporate intelligence researcher and MBA Career Coach. Your task is to generate a comprehensive but highly scannable "5-Minute Interview Dossier" for a candidate interviewing at {company_name} for the {job_role} position.
                 
-                STRICT CONSTRAINTS:
-                - ZERO fluff, filler words, or generic advice.
-                - Use punchy, data-backed bullet points.
-                - Maximum 2-3 bullets per section.
-                - Keep sentences under 15 words.
+                STRICT FORMATTING RULES:
+                - Target length: Detailed enough for a 5-minute read (approx. 600-800 words).
+                - Use bullet points with bolded keywords for easy scanning.
+                - NO long, blocky paragraphs. 
+                - Focus on MBA-level strategic insights (metrics, strategy, frameworks) rather than generic surface-level facts.
                 
-                STRUCTURE THE OUTPUT EXACTLY LIKE THIS:
+                STRUCTURE THE DOSSIER EXACTLY AS FOLLOWS:
                 
-                ### 🏢 1. The DNA (Company Overview)
-                * **What they actually do:** [1 sentence summary]
-                * **Core Values:** [Just the keywords, e.g., "Bias for Action, Frugality"]
+                ### 🏢 1. The Executive Brief (Company DNA)
+                * **Mission & Vision:** [2-3 sentences explaining their core purpose and long-term goal]
+                * **Culture & Values:** [3 detailed bullet points on their management style and what behaviors they actually reward in employees]
                 
-                ### 💰 2. The Engine (Business Model & Health)
-                * **How they make money:** [Revenue streams in 1 bullet]
-                * **Market Position:** [Current financial health or market share]
+                ### 💰 2. The Economic Engine (Business Model)
+                * **Revenue Streams:** [Break down exactly how they make money in 3-4 detailed bullets. Mention core products/services and target demographics.]
+                * **Financial Posture:** [Explain their current financial narrative in 2 bullets. Are they prioritizing growth, profitability, cutting costs, or expanding?]
                 
-                ### ⚔️ 3. The Moat (Competitors & Advantage)
-                * **Top 3 Competitors:** [Names only]
-                * **The Unique Advantage:** [Why they win against competitors in 1 sentence]
+                ### ⚔️ 3. The Competitive Moat (Market Landscape)
+                * **Key Competitors:** [List top 3-4 competitors and exactly how {company_name} differentiates itself from them]
+                * **Unique Value Proposition:** [Detail their 'unfair advantage'—e.g., distribution network, proprietary tech, brand loyalty]
                 
-                ### 📰 4. The "Right Now" (Recent News & Challenges)
-                * **Recent Win:** [Biggest news/launch in the last 6 months]
-                * **Biggest Pain Point:** [Current strategic challenge they are facing]
+                ### 📰 4. Strategic Imperatives (Recent News & Headwinds)
+                * **Recent Wins:** [2-3 bullet points on major launches, acquisitions, or positive news from the last 12 months]
+                * **Current Challenges/Headwinds:** [2-3 bullet points on their biggest threats right now—e.g., regulatory hurdles, supply chain, new entrants, AI disruption]
                 
-                ### 🎯 5. The Interview Angle (For a {job_role})
-                * **What they want:** [The core competency needed for this specific role]
-                * **Cultural Fit:** [Top 2 soft skills to emphasize]
+                ### 🎯 5. The {job_role} Playbook
+                * **Core Competencies:** [3 specific technical or soft skills they will heavily test for this specific role]
+                * **How to Add Value:** [2 concrete ways a person in this role can help solve the company's current challenges mentioned above]
                 
-                ### 🎤 6. The "Drop the Mic" Questions (To ask the interviewer)
-                Provide exactly 2 highly strategic, role-specific questions the candidate should ask to prove they did deep research. (Do not give generic questions).
-                1. [Question 1]
-                2. [Question 2]
+                ### 🎤 6. "Drop the Mic" Questions (To ask the Interviewer)
+                Provide 3 highly strategic, MBA-level questions for the candidate to ask at the end of the interview. For each, include a brief rationale.
+                * **Question 1:** [Strategic question about company direction or market shifts]
+                  * *Why this works:* [Brief rationale on why this impresses the panel]
+                * **Question 2:** [Role-specific or operational question]
+                  * *Why this works:* [Brief rationale]
+                * **Question 3:** [Culture, team-dynamics, or success-metric question]
+                  * *Why this works:* [Brief rationale]
                 """
 
                 # 3. GENERATE

@@ -76,7 +76,7 @@ if st.button("Generate Research Briefing", type="primary"):
 
                 # 3. THE 5-MINUTE DOSSIER PROMPT
                 full_prompt = # 3. THE 5-MINUTE DOSSIER PROMPT (WITH ACCURACY GUARDRAILS)
-                full_prompt = f"""
+                f"""
                 Act as an elite corporate intelligence researcher and MBA Career Coach. Your task is to generate a comprehensive but highly scannable "5-Minute Interview Dossier" for a candidate interviewing at {company_name} for the {job_role} position.
                 {live_context}
                 

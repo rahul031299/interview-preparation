@@ -117,7 +117,7 @@ if st.button("Generate Research Briefing", type="primary"):
                 - Verify the entity of '{company_name}' to avoid hallucinations.
                 
                 STRICT FORMATTING RULES:
-                - Target length: 600-800 words.
+                - Target length: 610-800 words.
                 - Use bullet points with bolded keywords. NO blocky paragraphs.
                 
                 STRUCTURE THE DOSSIER EXACTLY AS FOLLOWS:
